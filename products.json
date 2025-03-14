@@ -1,0 +1,43 @@
+{
+    "products": [
+      {
+        "images": [
+          {
+            "id": 0,
+            "name": "bottle_darkblue",
+            "image": "img/bottle_darkblue.png",
+            "price": "55.99"
+
+          },
+          {
+            "id": 1,
+            "name": "bottle_pink",
+            "image": "img/bottle_pink.png",
+            "price": "35.99"
+          },
+          {
+            "id": 2,
+            "name": "bottle_grey",
+            "image": "img/bottle_grey.png",
+            "price": "47.99"
+          },
+          {
+            "id": 3,
+            "name": "bottle_olivegreen",
+            "image": "img/bottle_olivegreen.png",
+            "price": "65.86"
+          },
+          {
+            "id": 4,
+            "name": "bottle_lightblue",
+            "image": "img/bottle_lightblue.png",
+            "price": "35.99"
+          }
+        ]
+      }
+      
+    ],
+    "total": 241.82,
+    "skip": 0,
+    "limit": 5
+  }

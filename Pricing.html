@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+    <link rel="stylesheet" href="Styles.css">
+    
+
+</head>
+<body>
+    <div class="product-info">
+<ul class="items">
+
+<li>
+    <h3 class="name"> Lux Blue</h3>
+    <img src="img/bottle_darkblue.png" width="380px" class="img1" alt="bottle_darkblue">
+    <p class="product" id="buyItems">DarkBlue</p>
+    <h4 class="price">R55.99</h4>
+</li>
+<li>
+    <h3 class="name"> Bottle Pink</h3>
+    <img src="img/bottle_pink.png" width="380px" class="img1" alt="bottle_pink">
+    <p class="product" id="buyItems">Pink</p>
+    <h4 class="price">R35.99</h4>
+</li>
+<li>
+    <h3 class="name"> Swanko grey</h3>
+    <img src="img/bottle_grey.png" width="380px"class="img1" alt="bottle_grey">
+    <p class="product" id="buyItems">grey</p>
+    <h4 class="price">R47.99</h4>
+</li>
+<li>
+    <h3 class="name"> Wavey Olivegreen</h3>
+    <img src="img/bottle_olivegreen.png" width="380px" class="img1"  alt="bottle_olivegreen">
+    <p class="product" id="buyItems">Olive green</p>
+    <h4 class="price">R65.86</h4>
+</li>
+<li>
+    <h3 class="name"> Soft Blue</h3>
+    <img src="img/bottle_lightblue.png" width="380px" class="img1" alt="bottle_lightblue">
+    <p class="product" id="buyItems">LightBlue</p>
+    <h4 class="price">R35.99</h4>
+</li>
+
+
+</ul>
+</div>
+
+<div class = "banner-content">
+          <!-- banner left -->
+          <div class = "banner-left">
+            <h2><span>get t-shirt</span> of your selection</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit expedita eveniet, atque facilis id cum delectus maxime labore alias dicta voluptatem aliquam earum, ea repudiandae laudantium velit assumenda asperiores nostrum?</p>
+            <button type = "button">read more</button>
+
+            <div class = "color-content">
+              <h3>select color</h3>
+              <div class = "color-groups">
+                <div class = "color color-white active-color"></div>
+                <div class = "color color-black"></div>
+                <div class = "color color-yellow"></div>
+                <div class = "color color-blue"></div>
+                <div class = "color color-red"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    <!-- <script>
+    
+    const elItem = document.querySelector('ul');
+    fetch('./products.json')
+    .then(res => res.json())
+    .then(products => {
+        products.forEach(post => {
+            <li></li>
+            elItem.insertAdjacentHTML('beforeend', `<li>${post.title}</li>`);
+            
+        });
+    ;})
+    </script> -->
+    <script src="app.js"></script>
+</body>
+</html>
