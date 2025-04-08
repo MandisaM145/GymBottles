@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="chrome">
     <title>Product Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link
       rel="stylesheet"
@@ -17,7 +17,12 @@
   </head>
   <body>
     <header id="home" class="header">
+
+
       <!-- Navigation and Cart Section -->
+
+
+
       <section class="banner-wrapper">
         <nav id="nav">
           <div class="fixed-nav">
@@ -28,8 +33,16 @@
                 <span class="cart-Item-Count-Badge"></span>
               </div>
             </div>
+    
+
+            <!-- Burger Menu for Mobile -->
+            <div class="burger-menu" id="burger-menu">
+              <i class="fas fa-bars burger-icon"></i>
+            </div>
+
+            <!-- Navigation Links (Desktop and Mobile) -->
             <div class="links-container">
-              <ul class="links">
+              <ul class="links" id="nav-links">
                 <li><a href="#home" class="scroll-link">Home</a></li>
                 <li><a href="#features" class="scroll-link">Features</a></li>
                 <li><a href="#pricing" class="scroll-link">Pricing</a></li>
@@ -37,9 +50,15 @@
               </ul>
             </div>
           </div>
+
         </nav>
 
-        <!-- Cart Section -->
+
+
+        <!-- hidden Cart Section -->
+
+
+
         <div class="cart">
           <h2 class="cart-title">Your Cart</h2>
           <div class="cart-content"></div>
@@ -51,7 +70,12 @@
           <i class="ri-close-line" id="cart-close"></i>
         </div>
 
-        <!-- Product Selection Banner Section -->
+
+
+        <!-- Banner Section -->
+
+
+
         <div class="container-home">
           <div class="banner-content">
             <!-- Banner Left -->
@@ -59,6 +83,8 @@
               <h2><span>Get a Bottle</span> of Your Selection</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit expedita eveniet...</p>
               <button type="button">Read More</button>
+
+
 
               <!-- Color Selection -->
               <div class="color-content">
@@ -73,36 +99,76 @@
               </div>
             </div>
 
-            <!-- Banner Right (Image) -->
+
+
+ <!-- Banner Right (Image) -->
             <div class="banner-right">
               <img src="img/bottle_darkblue.png" alt="bottle_darkblue" class="img">
+                      
+              <!-- modal -->
+              <button class="btn modal-btn">
+                Color choice
+              </button>
+            </div>
+          </header>
+          <!-- modal -->
+          <div class="modal-overlay">
+            <div class="modal-container">
+
+
+<!-- Modal Overlay for Cart Items -->
+     
+
+ <div class="modal">
+  <h2 class="cart-title">Choose Your Colour</h2> <br>
+  <div>
+    <input type="radio" class="darkblue" name="bottle" value="darkblue" checked />
+    <label for="darkblue">DarkBlue</label>
+  </div>
+  <div>
+    <input type="radio" class="pink" name="bottle" value="pink" checked />
+    <label for="pink">Pink</label>
+  </div>
+  <div>
+    <input type="radio" class="grey" name="bottle" value="grey" checked />
+    <label for="grey">Grey</label>
+  </div>
+  <div>
+    <input type="radio" class="green" name="bottle" value="green" checked />
+    <label for="grey">Green</label>
+  </div>
+  <div>
+    <input type="radio" class="lightBlue" name="bottle" value="LightBlue" checked />
+    <label for="LightBlue" class="product-title">LightBlue</label>
+  </div>
+  <button class="btn-buy">Buy Now</button>
+  <p id="result"></p>
+</div>
+              <button class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+          </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Modal Overlay for Cart Items
-     
+ 
+ 
+      
+    </div>
+  </div>
 
-                  <div class="cart">
-          <h2 class="cart-title">Your Cart</h2>
-          <div class="cart-content"></div>
-          <div class="total">
-            <div class="total-title">Total</div>
-            <div class="total-price">0</div>
-          </div>
-          <button class="btn-buy">Buy Now</button>
-          <i class="ri-close-line" id="cart-close"></i>
-        </div>
-              
-            </div>
-          </div>
-          <button class="close-btn-modal"><i class="fas fa-times"></i></button>
-        </div>
-      </div>
-    </header> -->
+</div>
 
-    <!-- Features Section -->
+
+
+
+
+    <!-- FEATURES SECTION -->
+
+
+
+
     <section id="features" class="banner-left shop">
       <div class="section-title">
         <h2 class="Big-heading">Features</h2>
@@ -146,11 +212,19 @@
       </div>
     </section>
 
-    <!-- Pricing Section -->
+
+
+
+    <!-- PRICING SECTION -->
+
+
+
+
+
     <section id="pricing" class="banner-left shop">
       <div class="section-title">
         <h2 class="Big-heading">Pricing</h2>
-        <p><strong>Stock Price</strong> Bottle Range pricing</p>
+        <p><strong>Stock Price</strong><br> Bottle Range pricing</p>
         <div class="product-content">
 
       <div class="product-content">
@@ -161,7 +235,8 @@
         <h2 class="product-title">Grey</h2>
         <div class="price-cart">
           <span class="price" data-amount="35.99">R35.99</span>
-          <!-- <i class="ri-shopping-cart-line add-cart active"></i> -->
+          <label for="special" class="special" data-amount="55.99">Incl. gift</label>
+          <i class="ri-shopping-cart-line add-cart active"></i>
         </div>
       </div>
 
@@ -173,7 +248,8 @@
         <h2 class="product-title">Lux Blue</h2>
         <div class="price-cart">
           <span class="price" data-amount="55.99">R55.99</span>
-          <!-- <i class="ri-shopping-cart-line add-cart"></i> -->
+          <label for="special" class="special" data-amount="55.99">Incl. gift</label>
+          <i class="ri-shopping-cart-line add-cart"></i>
         </div>
       </div>
 
@@ -185,7 +261,8 @@
           <h2 class="product-title">Shadow Grey</h2>
           <div class="price-cart">
             <span class="price" data-amount="50.00">R50.00</span>
-            <!-- <i class="ri-shopping-cart-line add-cart"></i> -->
+            <label for="special" class="special" data-amount="55.99">Incl. gift</label>
+             <i class="ri-shopping-cart-line add-cart"></i>
           </div>
         </div>
 
@@ -197,7 +274,8 @@
             <h2 class="product-title">Dark grey</h2>
             <div class="price-cart">
               <span class="price" data-amount="65.99">R65.99</span>
-              <!-- <i class="ri-shopping-cart-line add-cart"></i> -->
+              <label for="special" class="special" data-amount="55.99">Incl. gift</label>
+               <i class="ri-shopping-cart-line add-cart"></i> 
             </div>
           </div>
            <!-- Product 6 -->
@@ -207,8 +285,9 @@
         </div>
         <h2 class="product-title">light Blue</h2>
         <div class="price-cart">
-          <span class="price" data-amount="55.99">R55.99</span>
-          <!-- <i class="ri-shopping-cart-line add-cart"></i> -->
+          <span class="price" data-amount="57.99">R57.99</span>
+          <label for="special" class="special" data-amount="55.99">Incl. gift</label>
+           <i class="ri-shopping-cart-line add-cart"></i>
         </div>
       </div>
 
@@ -217,24 +296,28 @@
   </div>
     </section>
 
-    <!-- Contact Section -->
+
+
+    <!-- CONTACT SECTION  -->
+
+      
     <section id="contact" class="banner-left">
       <div class="title">
         <h2>Contact Us</h2><br><br><br>
 
-        <div class="btn1">
+        <div class="banner-left ">
           <h5>Name <input type="text" placeholder="Name" class="input"></h5>
         </div>
-        <div class="btn1">
+        <div class="banner-left">
           <h5>Email <input type="email" placeholder="Email" class="input"></h5>
         </div>
-        <div class="btn1">
+        <div class="banner-left">
           <h5>Message <input type="text" placeholder="Message" class="input"></h5>
         </div>
-        <button class="input" type="submit">Submit</button>
+        <button class="submit" type="submit">Submit</button>
         <br>
-        <input type="checkbox">
-        <p>I agree to the <a href="ContactPage.html">Terms and Conditions</a></p>
+        <input type="checkbox" id="checking" class="checkbox">
+        <label>I agree to the <a href="ContactPage.html">Terms and Conditions</a></label>
       </div>
     </section>
 
