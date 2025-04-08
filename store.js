@@ -1,3 +1,19 @@
+// select modal-btn,modal-overlay,close-btn
+// listen for click events on modal-btn and close-btn
+// when user clicks modal-btn add .open-modal to modal-overlay
+// when user clicks close-btn remove .open-modal from modal-overlay
+
+const modalBtn = document.querySelector(".modal-btn");
+const modal = document.querySelector(".modal-overlay");
+const closeBtn = document.querySelector(".close-btn");
+
+modalBtn.addEventListener("click", function () {
+  modal.classList.add("open-modal");
+});
+closeBtn.addEventListener("click", function () {
+  modal.classList.remove("open-modal");
+});
+
 // -==== Color Change for Banner =======//
 const COLOR_BTNS = document.querySelectorAll('.color');
 COLOR_BTNS.forEach(color => {
@@ -14,6 +30,8 @@ COLOR_BTNS.forEach(color => {
     });
 })
 
+
+
 // resetting all color btns
 function resetActiveBtns(){
     COLOR_BTNS.forEach(color => {
@@ -25,6 +43,24 @@ function resetActiveBtns(){
 function setNewColor(color){
     document.querySelector('.banner-right img').src = `img/bottle_${color}.png`;
 }
+
+
+
+// Radio buttons selected//
+let radioBtns = document.querySelectorAll("input[name='bottle']");
+//  let value = document.querySelectorAll("input{value=[green, grey, lightblue, darkblue, pink]}");
+let result = document.getElementById("result");
+ let findSelected = () => {
+    let selected = document.querySelector("input[name='bottle']:checked").value;
+    result.textContent = `Value of selcted radio button: ${selected}`;
+ }
+ radioBtns.forEach( radioBtns => {
+    radioBtns.addEventListener("change",findSelected);
+findSelected();
+
+    })
+
+ 
 
 
 // -==== Cart Operations =======//
@@ -185,4 +221,28 @@ buyNowButton.addEventListener("click", () => {
 
     // Show thank you message
     alert("Thank you for your purchase, goodbye.");
+});
+
+
+
+//Clear submit button //
+let clearBtn = document.querySelector('.submit');
+let inputs = document.querySelectorAll('input');
+clearBtn.addEventListener('click', () => {
+inputs.forEach(input => input.value = '');
+})
+
+
+// const burger = document.querySelector('.burger-icon');
+// const links = document.querySelector('.links');
+
+// burger.addEventListener('click', () => {
+//     links.classList.toggle('show');
+// });
+const burgerMenu = document.getElementById('burger-menu');
+const navLinks = document.getElementById('nav-links');
+
+// Toggle the visibility of the navigation links when the burger menu is clicked
+burgerMenu.addEventListener('click', () => {
+  navLinks.classList.toggle('active'); // Toggle the 'active' class to show/hide the menu
 });
